@@ -1,0 +1,94 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<%@ Register Src="~/Controls/Header.ascx" TagName="Header" TagPrefix="Uc1" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<link rel="stylesheet" type="text/css" href="style3.css" />
+<link rel="stylesheet" type="text/css" href="StyleSheet3.css" />
+    <title></title>
+
+ <style type="text/css">
+        #hyperlink
+        {
+            width: 888px;
+        }
+        #profileimage
+        {
+            height: 226px;
+        }
+     #contentplace
+     {
+         height: 84px;
+         width: 533px;
+     }
+    </style>
+
+</head>
+<body style="background-color:#EEEEEE">
+  <form id="form1" runat="server">
+   <div runat="server" id="h_master" 
+       style="background-color:#344455; height: 96px;">
+        
+     <img src="Images/linkpals.gif" style=" float:left;" alt="Images/linkpals.gif"/>
+     
+      <div id="ss" runat="server" style="float:right; height: 82px; width: 337px;">     
+                    <Uc1:Header ID="Header" runat="server" />
+             </div>
+    </div>
+    <div id="m_images" runat="server" style="float:right; height:20%;">
+    <table>
+   
+       <tr>
+     
+       <td >
+      <asp:ImageButton ImageUrl="~/Images/blogs1.gif" id="blog" runat="server" PostBackUrl="~/BlogList.aspx" />
+      </td>
+         <td>
+       <asp:ImageButton ImageUrl="~/Images/newblog1.gif" id="rate" runat="server" PostBackUrl="~/BlogEntry.aspx" />
+       </td>
+       <td>
+       <asp:ImageButton ImageUrl="~/Images/photos1.gif" id="music" runat="server" PostBackUrl="~/ImageUpload.aspx"  />
+   </td>
+       <td>
+       <asp:ImageButton ImageUrl="~/Images/album1.gif" id="events" runat="server" PostBackUrl="~/Albums.aspx" />
+    </td>
+       <td>
+       <asp:ImageButton ImageUrl="~/Images/caht1.gif" id="chat" runat="server" PostBackUrl="~/ChatRoom.aspx" />
+    </td>
+       <td> 
+       <asp:ImageButton ImageUrl="~/Images/videos1.gif" id="video" runat="server" PostBackUrl="~/video.aspx" />
+    </td>
+          <td> 
+       <asp:ImageButton ImageUrl="~/Images/media1.gif" id="ImageButton1" runat="server" PostBackUrl="~/Video_DataList.aspx" />
+    </td>
+     <td> 
+         &nbsp;</td>
+      <td>
+      <asp:ImageButton ImageUrl="~/Images/forum1.gif" id="forum" runat="server" PostBackUrl="~/Forum.aspx" />
+      </td>
+   <td>
+       <asp:ImageButton ImageUrl="~/Images/download1.gif" id="search" runat="server" 
+               PostBackUrl="~/DownloadFiles.aspx"/></td>
+       </tr></table></div>
+       
+             <div id="contentplace" runat="server" style="top:300px; float:left; width:1024px;">
+      <asp:ContentPlaceHolder  ID="content" runat="server">
+     </asp:ContentPlaceHolder>
+    </div>
+        
+        
+     
+    
+   
+ 
+   
+  
+
+
+    </form>
+        
+    </body>
+</html>

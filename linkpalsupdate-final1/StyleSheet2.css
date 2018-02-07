@@ -1,0 +1,23 @@
+﻿body 
+{
+	height:100%;
+	width:100%;
+}
+#header
+{
+	height:20%;
+	width:100%;
+	}
+    
+#menubar
+{
+	float:left;
+	height:20%;
+	width:100%;
+	
+	}	
+#userblog
+{
+    float:left;
+
+    }
